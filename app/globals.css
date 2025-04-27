@@ -48,3 +48,21 @@
   font-weight: bold;
   font-style: italic;
 }
+@font-face {
+  font-family: "rubik";
+  src: url("/Rubik-Regular.ttf") format("truetype");
+  /* url('/Rubik-Regular.woff') format('woff'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "super";
+  src: url("/fonts/xx.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "super";
+  src: url("/fonts/xxt.ttf") format("truetype");
+  font-style: italic;
+}

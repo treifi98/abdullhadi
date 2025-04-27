@@ -43,11 +43,11 @@ function Header(props: Props) {
 
     return (
         <>
-            <div className='bg-[#ccc] w-full h-[200px] flex items-center justify-between px-[80px]'>
+            <div className='bg-[#ff6200] w-full h-[100px] flex items-center justify-between px-[80px]'>
                 <div>
                     <img src='/logo.svg' alt='logo' className='w-[100px]' />
                 </div>
-                <div className='text-[18px] text-center rounded-full border-[#000] border-[2px] py-[5px] px-[20px] font-["rubik"]' onMouseOver={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
+                <div className='text-[18px] text-center rounded-full border-[#000] border-[2px] py-[5px] px-[20px] font-["super"]' onMouseOver={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
                     Say Hi!
                 </div>
                 <div className='w-[100px] flex flex-col justify-between items-center h-[20px]'>
