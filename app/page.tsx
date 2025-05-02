@@ -242,6 +242,10 @@ export default function Home() {
           LinkedIn
         </a>
         <div className="w-[1px] h-[40px] bg-[#ffce2e]"></div>
+        <a href='/cv.pdf' target='_blank'>
+          Resume
+        </a>
+        <div className="w-[1px] h-[40px] bg-[#ffce2e]"></div>
         <div>Copyright © 2025. All rights reserved.</div>
       </div>
     </div>
