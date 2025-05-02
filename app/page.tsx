@@ -46,8 +46,8 @@ const projectsd = [
   },
   {
     title: 'Direct Debit',
-    desc: 'desc4',
-    skills:"",
+    desc: 'A fintech mobile application designed to facilitate the setup and management of recurring payments through Direct Debit. The app enables payers to authorize payments, track upcoming and past transactions and manage multiple payment mandates securely and efficiently. It simplifies rent, tuition, subscription, and utility payments by offering a seamless, automated experience, reducing manual effort for both payers and merchants.',
+    skills:"Provider , Flutter web , UAE pass authentication , fintech , Deep Link , GIT , Testing",
     img: '/proj4.jpg',
     id: '4'
   }
@@ -62,7 +62,7 @@ export default function Home() {
     ['kodi/1.png','kodi/2.jpg','kodi/3.jpg','kodi/4.jpg','kodi/5.jpg'],
     ['breeze/1.jpg','breeze/2.jpg','breeze/3.jpg','breeze/4.jpg'],
     ['wave/1.png','wave/2.png','wave/3.png','wave/4.png'],
-    ['kodi/1.png','kodi/2.jpg','kodi/3.jpg','kodi/4.jpg','kodi/5.jpg'],
+    ['dd/1.jpg','dd/2.png','dd/3.png','dd/4.png','dd/5.png'],
   ]
   const handleApp = (index:number) => {
     setImgs(projects[index])
@@ -91,11 +91,11 @@ export default function Home() {
   useLenis();
   return (
     <>
-      <div>
+      {/* <div>
         <Header/>
-      </div>
-      <div className="w-full bg-[#ff6200] h-[calc(100vh-100px)] flex flex-col-reverse items-center justify-evenly lg:justify-between lg:items-baseline  lg:flex-row px-[20px] lg:px-[80px] pt-[50px] lg:pt-[100px]">
-        <div className="font-[super] text-[#fff] text-[30px] md:text-[60px] lg:text-[120px] w-full text-center flex flex-col  lg:justify-between  lg:w-[40%] lg:h-[calc(100%-200px)]">
+      </div> */}
+      <div className="w-full bg-[#ff6200] min-h-[100vh] flex flex-col-reverse items-center justify-evenly lg:justify-between lg:items-baseline  lg:flex-row px-[20px] lg:px-[80px] pt-[50px] lg:pt-[50px] pb-[20px]">
+        <div className="font-[super] text-[#fff] text-[40px] md:text-[80px] sbp:text-[20px] xl:text-[120px] w-full text-center flex flex-col  lg:justify-between  lg:w-[40%] lg:h-[calc(100%-200px)]">
           <div>
 
             ABDULHADI SoLAIMANO
@@ -111,15 +111,15 @@ export default function Home() {
 
       {/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-      <div className="w-full h-max bg-[#1c1d1e] overflow-hidden pb-[100px]">
+      <div className="w-full max-h-[1400px] md:max-h-[2000px] h-min bg-[#1c1d1e] overflow-hidden md:pb-[100px]">
         <div className="w-[full] h-[2px] my-[10px] bg-[#ff6200]"></div>
         <div className="text-center text-[30px] md:text-[60px] lg:text-[120px] font-[super] text-[#ff6200]">
           PROJECTS
         </div>
-        <div className="w-[90%] h-full relative mx-auto max-w-[1200px] transition-all duration-[0.5s]">
+        <div className="w-[90%] h-full relative mx-auto max-w-[1200px] transition-all duration-[0.5s] mt-[40px]">
           <div className=" w-full h-full flex flex-col-reverse md:flex-row justify-center  items-center transition-all duration-[0.5s]  md:gap-[100px]">
 
-            <div className="text-[#fff] text-[22px] md:max-h-[260px]  w-0 overflow-hidden tango transition-all duration-[0.5s]">
+            <div className="text-[#fff] text-[22px] md:max-h-[360px]  w-0 overflow-hidden tango transition-all duration-[0.5s]">
               <div className="px-[10px] font-bold italic inline-block relative mr-[5px]">
                 <span className="relative text-[22px] z-[9]">
                   {projectsd[active].title} 
@@ -192,37 +192,57 @@ export default function Home() {
       </div>
 
 
-      <div className="w-full h-max min-h-[100vh] bg-[#ffce2e] overflow-hidden">
+      <div className="w-full h-max min-h-[100vh] bg-[#ffce2e] overflow-hidden pb-[20px]">
       <div className="w-[full] h-[2px] my-[10px] bg-[#1c1d1e]"></div>
         <div className="text-center text-[30px] md:text-[60px] lg:text-[120px] font-[super] text-[#1c1d1e]">
             Get to know me
         </div>
-        <div className="w-full h-full px-[40px] flex justify-between items-center overflow-hidden">
-          <div className="w-[50%] h-full flex justify-center items-center leading-[0] ">
+        <div className="w-full h-full px-[20px] md:px-[40px] flex justify-between items-center overflow-hidden flex-col lg:flex-row">
+          <div className="w-full lg:w-[60%] h-full flex  justify-center items-center leading-[0] text-center lg:text-left">
 
-            <div className="text-[50px] h-min text-[#1c1d1e] leading-[110%] mt-[0px]">
-            Experienced flutter engineer with +4 years of solid expertise in mobile and web app development. Developed and maintained 8 apps on app Stores and web, continuously seeking new skills to fuel my passion for mobile and web app development. Proven direct client communication skills, adapting diverse needs into successful solutions. Skills in multiple programming languages and in problem solving.
+            <div className="text-[20px] md:text-[30px] xl:text-[32px] h-min text-[#1c1d1e] leading-[120%] mt-[50px] lg:mt-[20px]">
+            <p>
+              I'm a Flutter enthusiast on a mission! With over 4 years of hands-on experience crafting mobile and web applications, I've successfully launched and maintained 8 apps across various platforms.
+            </p>
+            <p className="mt-[22px]">
+
+              My approach combines technical expertise with genuine curiosity—I'm constantly exploring new technologies and techniques to enhance my development toolkit. What drives me? The thrill of transforming concepts into elegant, functional solutions that users love.
+            </p>
+            <p className="mt-[22px]">
+
+              When I'm not coding, you'll find me exploring emerging tech trends and thinking about the next great app experience!
+              I thrive in direct client collaborations, translating diverse requirements into successful applications through clear communication and adaptive problem-solving. 
+            </p>
+            <p className="mt-[22px]">
+              My versatility extends beyond Flutter to multiple programming languages, allowing me to tackle challenges from different angles and deliver results that exceed expectations.
+            </p>
             </div>
           </div>
-          <img src="skills.png" className="mt-[100px] w-[50%]" alt="" />
+          <img src="skills.png" className="mt-0 xl:mt-[100px] w-[100%] lg:w-[40%]" alt="" />
         </div>
 
     </div>
-    <div className="w-full h-[200px] bg-[#1c1d1e] text-[#fff] overflow-hidden">
+    <div className="w-full h-[400px] bg-[#1c1d1e] text-[#fff] overflow-hidden">
     <div className="w-[full] h-[2px] my-[10px] bg-[#ffce2e] "></div>
-      <div className="flex justify-between items-center mt-[140px] w-full px-[20px]">
+    <div className=" text-[30px] md:text-[60px] lg:text-[100px] text-center font-[super] text-[#fff]">
+      <div >
+        Get in
+        touch
+      </div>
+    </div>
+      <div className="flex justify-evenly items-center mt-[140px] w-full px-[40px]">
         <div>
 
-          Abdulhadi@gmail.com
+          Hadi.slemano8@gmail.com
         </div>
         <div className="w-[1px] h-[40px] bg-[#ffce2e]"></div>
-        <div>+971123456789</div>
+        <div>+971 56 642 8773</div>
         <div className="w-[1px] h-[40px] bg-[#ffce2e]"></div>
-        <div>
+        <a href="https://www.linkedin.com/in/abdulhadi-slemano/">
           LinkedIn
-        </div>
+        </a>
         <div className="w-[1px] h-[40px] bg-[#ffce2e]"></div>
-        <div>@copyrights</div>
+        <div>Copyright © 2025. All rights reserved.</div>
       </div>
     </div>
     </>

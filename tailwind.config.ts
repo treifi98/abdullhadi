@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens:{
+          "sbp":'1240'
+      },
       keyframes: {
         'up-down': {
           '0%, 100%': { transform: 'translateY(0)' },
