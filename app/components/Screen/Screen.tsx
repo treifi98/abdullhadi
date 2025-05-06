@@ -74,7 +74,7 @@ export default function Screen(props: Props) {
             <img 
               alt="" 
               src={img} 
-              className="w-full !block relative !h-[760px] !object-cover text-[60px] text-[#fff] object-center"
+              className="w-full !block relative !h-[calc(100%-56px)] !object-cover text-[60px] text-[#fff] object-center"
             />
           </div>
         ))}
