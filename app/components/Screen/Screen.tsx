@@ -81,7 +81,7 @@ export default function Screen(props: Props) {
       </Slider>
       <div className="absolute bottom-0 left-0 bg-[#000] w-full h-[56px] !flex justify-center items-center">
         <div 
-          className="z-[2] cursor-pointer border-[2px] border-[#fff] rounded-full w-[60px] !flex justify-center items-center" 
+          className="z-[2] cursor-pointer border-[2px] border-[#fff] rounded-full w-[30%] !flex justify-center items-center" 
           onClick={handleClose}
         >
           <img src="back.svg" className="w-[30px]" alt="" />

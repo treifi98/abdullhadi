@@ -13,7 +13,7 @@ export default function App(props:Props) {
     <div className="w-full aspect-square rounded-xl overflow-hidden group-hover:rotate-[-5deg] transition-all duration-[0.2s]">
         <img src={props.logo} className='w-full h-full' alt="" />
     </div>
-    <div className="text-[#fff] text-center text-[16px] leading-[100%] pt-[10px]">
+    <div className="text-[#fff] text-center text-[12px] md:text-[16px] leading-[100%] pt-[10px]">
       {props.title}
     </div>
   </div>

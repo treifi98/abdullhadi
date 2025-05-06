@@ -132,9 +132,7 @@ export default function Phone() {
             </div> */}
 
           <div
-            className={`device device-google-pixel-6-pro ${
-              width <= 900 ? "!scale-[0.8]" : "!md:scale-1"
-            }`}
+            className={`device device-google-pixel-6-pro`}
           >
             <div className="device-frame  overflow-hidden ">
               <div className="relative overflow-hidden device-screen w-full h-full  !flex justify-start items-start gap-y-[0px] gap-x-[calc(10%-0px)] !px-[5%] flex-wrap  ">
@@ -180,7 +178,7 @@ export default function Phone() {
               </div>
             </div>
             <div className="device-stripe relative z-[9]"></div>
-            <div className="device-header relative z-[9]"></div>
+            {/* <div className="device-header relative z-[9]"></div> */}
             <div className="device-sensors relative z-[9]"></div>
             <div className="device-btns relative z-[9]"></div>
             <div className="device-power relative z-[9]"></div>
