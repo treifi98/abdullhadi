@@ -1,9 +1,10 @@
+'use client'
 import useWindowSize from "@/app/hooks/useWindowSize";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import App from "../App/App";
 import Screen from "../Screen/Screen";
-import "../../devices.css"
-
+import "../../devices.css";
+import Explain from "../Explain/Explain";
 
 export default function Phone() {
   const projectsd = [
@@ -49,6 +50,8 @@ export default function Phone() {
   const { width, height } = useWindowSize();
   const [imgs, setImgs] = useState([""]);
   const [active, setActive] = useState(0);
+  const [visitied, setVisited] = useState(0);
+  const [Tip, setTip] = useState(false);
 
   const projects = [
     ["kodi/1.jpg", "kodi/2.jpg", "kodi/3.jpg", "kodi/4.jpg", "kodi/5.jpg"],
@@ -68,6 +71,7 @@ export default function Phone() {
     document.querySelector(".tango")?.classList.add("flex-[1]");
     document.querySelector(".tango")?.classList.remove("w-0");
     document.querySelector(".tango")?.classList.add("w-full");
+    document.querySelector(".tango")?.classList.remove("h-0");
     document.querySelector(".tango2")?.classList.remove("w-0");
     document.querySelector(".tango2")?.classList.add("w-full");
     document.querySelector(".tango3")?.classList.remove("w-0");
@@ -81,15 +85,54 @@ export default function Phone() {
       ? setActive(projects.length - 1)
       : setActive((prev) => prev - 1);
 
+  const elementRef = useRef(null);
+
+  const elementIsVisibleInViewport = (el:any, partiallyVisible = false) => {
+    const { top, left, bottom, right } = el.getBoundingClientRect();
+    const { innerHeight, innerWidth } = window;
+    return partiallyVisible
+      ? ((top > 0 && top < innerHeight) ||
+          (bottom > 0 && bottom < innerHeight)) &&
+          ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+      : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+  };
+
+  const handleScroll = () => {
+    if (elementRef.current) {
+      const isVisible = elementIsVisibleInViewport(elementRef.current);
+      // if(isVisible){
+      // }
+      
+      // Do something when element is visible
+      if (isVisible && visitied == 0) {
+        // Your code here when element is visible
+        setTip(true)
+
+        setVisited(1)
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Add scroll event listener when component mounts
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
+    
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [visitied]);
+  ////////////////////////////////////////////////////
+
   return (
     <>
       <div className="w-[90%] h-full relative mx-auto max-w-[1200px] flex-col transition-all duration-[0.5s] mt-[20px] flex justify-center">
-
         <div className=" w-full h-full flex flex-col-reverse md:flex-row justify-center mx-auto items-center transition-all duration-[0.5s]  md:gap-[0px] overflow-hidden">
-
-          <div className="text-[#fff] text-[22px] md:max-h-[360px]  w-0 overflow-hidden tango transition-all duration-[0.5s]">
+          <div className="text-[#fff] text-[22px] h-0 md:max-h-[360px]  w-0 overflow-hidden tango transition-all duration-[0.5s]">
             <div className="mr-[100px]">
-
               <div className="px-[10px] font-bold italic inline-block relative mr-[5px]">
                 <span className="relative text-[22px] z-[9]">
                   {projectsd[active].title}
@@ -131,9 +174,7 @@ export default function Phone() {
 
             </div> */}
 
-          <div
-            className={`device device-google-pixel-6-pro`}
-          >
+          <div className={`device device-google-pixel-6-pro`} ref={elementRef}>
             <div className="device-frame  overflow-hidden ">
               <div className="relative overflow-hidden device-screen w-full h-full  !flex justify-start items-start gap-y-[0px] gap-x-[calc(10%-0px)] !px-[5%] flex-wrap  ">
                 <img
@@ -184,6 +225,10 @@ export default function Phone() {
             <div className="device-power relative z-[9]"></div>
           </div>
         </div>
+        {
+          Tip && 
+        <Explain/>
+        }
       </div>
     </>
   );

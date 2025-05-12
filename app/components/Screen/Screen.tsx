@@ -45,6 +45,10 @@ export default function Screen(props: Props) {
     document.querySelector('.tango')?.classList.add('flex-[0]');
     document.querySelector('.tango')?.classList.remove('flex-[1]');
     document.querySelector('.tango')?.classList.add('w-0');
+    setTimeout(() => {
+      
+      document.querySelector('.tango')?.classList.add('h-0');
+    }, 500);
     document.querySelector('.tango')?.classList.remove('w-full');
     // setTimeout(() => {
       

@@ -11,6 +11,8 @@ import Phone from "./components/Phone/Phone";
 import Card from "./components/Card/Card";
 import BG from "./components/BG/BG";
 import LoopBar from "./components/LoopBar/LoopBar";
+import Menue from "./components/Menue/Menue";
+import Contact from "./components/Contact/Contact";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -21,8 +23,12 @@ export default function Home() {
   useLenis();
   return (
     <>
-    <div className=" bg-[#151312] overflow-hidden py-[100px]">
-        <div className=" flex justify-center items-start max-w-[900px] mx-auto flex-wrap gap-[20px] px-[20px]">
+    <div className=" bg-[#151312] overflow-hidden ">
+      <div className="flex justify-between items-center w-[90%] mx-auto mt-[20px]">
+        <img src="logo.svg" alt="" className="max-w-[100px]"/>
+        <Menue/>
+      </div>
+        <div className=" flex justify-center items-start max-w-[900px] mx-auto flex-wrap gap-[20px] px-[20px] my-[80px]" id="about">
           <Card/>
           <div className="px-[20px] md:px-[0px] flex flex-col gap-[10px] md:ml-auto">
             <div className="flex flex-col justify-start items-start text-[80px] font-[pop] font-bold ">
@@ -51,55 +57,31 @@ export default function Home() {
                 </div>
             </div>
             <LoopBar>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
-                <div className="text-[#fff]">flutter</div>
+                <div className="text-[#fff]">Flutter</div>
+                <div className="text-[#fff]">State Management</div>
+                <div className="text-[#fff]">Flutter Web</div>
+                <div className="text-[#fff]">Clean Architecture</div>
+                <div className="text-[#fff]">Goolge Maps</div>
+                <div className="text-[#fff]">FireBase Messaging</div>
+                <div className="text-[#fff]">Local Database</div>
+                <div className="text-[#fff]">Git</div>
+                <div className="text-[#fff]">Responsive Design</div>
             </LoopBar>
           </div>
         </div>
 
-        <div className="mt-[120px] flex flex-col justify-center items-center">
+        <div className="mt-[120px] flex flex-col justify-center items-center" id="projects">
           <div className="text-[80px] text-[#ff7b004d] font-[pop] text-center">PROJECTS</div>
 
           <Phone/>
         </div>
-        <div className="mt-[120px] flex flex-col justify-center items-center overflow-hidden">
-          <div className="text-[80px] text-[#ff7b004d] font-[pop] text-center ">Get In Touch</div>
-            <div className="max-w-[600px] mx-auto bg-[#080807ad] overflow-hidden rounded-lg flex justify-center items-center mt-[20px]">
-            <form action="" className="w-full h-full text-[#fff] flex flex-col justify-center items-center gap-[40px] p-[60px]">
-              <div className="max-w-[400px] min-w-[300px] flex flex-col justify-center items-start gap-[10px]">
-                <div>
+        <div id="contact">
 
-                  Your Name
-                </div>
-                <input type="text" placeholder="Jhon Doe" className="bg-[#ff7b004d] rounded-md py-[3px] px-[10px] w-full"/>
-              </div>
-              <div>
-                <div className="max-w-[400px] min-w-[300px] flex flex-col justify-center items-start gap-[10px]">
+          <Contact/>
+        </div>
 
-                  Contact Details 
-                </div>
-                <input type="text" placeholder="Email Or Phone Number" className="bg-[#ff7b004d] rounded-md py-[3px] px-[10px] w-full"/>
-              </div>
-              <div className="max-w-[400px] min-w-[300px] flex flex-col justify-center items-start gap-[10px]">
-                <div className="">
-
-                  Message
-                </div>
-                <textarea placeholder="Roses are red violets are blue, I wanna work with you!" className="bg-[#ff7b004d] rounded-md py-[3px] px-[10px] w-full"/>
-              </div>
-                <div className='flex justify-center items-center bg-[#ff7a00] px-[30px] py-[5px] rounded-md mt-[40px]'>
-                  <div className='text-[#fff] cursor-pointer'>
-                    Let's Talk
-                  </div>
-                </div>
-            </form>
-          </div>
+        <div className="text-center text-[#fff] mb-[20px] mt-[80px] text-[20px]">
+          ©  2025 Abdul Hadi Solaimano. All rights reserved.
         </div>
 
         <BG/>

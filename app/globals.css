@@ -95,7 +95,7 @@ img{
 .ssroller .sinnerscroller {
   flex-wrap: nowrap !important;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 25s linear infinite;
 }
 
 @keyframes scroll {
